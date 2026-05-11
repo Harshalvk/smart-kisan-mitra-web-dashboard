@@ -70,7 +70,10 @@ export default function Dashboard() {
             </div>
 
             <div className={activeTab === "history" ? "block" : "hidden"}>
-              <SensorHistory deviceId={selectedDevice} />
+              <SensorHistory
+                gatewayUrl={API_GATEWAY_URL}
+                deviceId={selectedDevice}
+              />
             </div>
             <div className={activeTab === "alerts" ? "block" : "hidden"}>
               <motion.div
